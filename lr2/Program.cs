@@ -16,12 +16,20 @@ namespace lr2
 
             if (zh == "+")
                 res = Num1 + Num2;
-            if (zh == "-")
+            else if (zh == "-")
                 res = Num1 - Num2;
-            if (zh == "/")
-                res = Num1/Num2;
-            if (zh == "*")
-                res = Num1*Num2;
+            else if (zh == "/")
+                if (Num2 == 0)
+                {
+                    Console.WriteLine("Нельзя делить на 0");
+                }
+                else
+                {
+                    res = Num1 / Num2;
+                }
+
+            else if (zh == "*")
+                res = Num1 * Num2;
             Console.WriteLine(res);
         }
     }
